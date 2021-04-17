@@ -1,0 +1,714 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: white; */
+    font-family: 'Rubik', sans-serif;
+    transition: .2s linear;
+    letter-spacing: 1px;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0% 5%;
+}
+.primaryColor{
+    color: #2558ab;
+    text-transform: uppercase;
+}
+.descriptionColor{
+    color: #8b99ae;
+    font-size: 15px;
+}
+.secondaryColor{
+    color: #ff8057;
+}
+.arrow{
+    font-size: 25px;
+    color: #ff8057;
+    text-decoration: none;
+}
+
+h1{
+    color: #343a40;
+    font-weight: 100;
+}
+h4{
+    color: #343a40;
+    font-weight: 100;
+    font-size: 20px;
+}
+p{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid #8b99ae34;
+}
+.navLeft{
+    width: 25%;
+}
+.navLeft a{
+    text-decoration: none;
+    color: #2558ab;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+}
+.navRight{
+    width: 65%;
+}
+.navList{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navItems{
+    padding: 4%;
+}
+.navItems a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+}
+.navItems a:hover{
+    color: #2558ab;
+}
+
+.menu
+{
+    width: 20px;
+    height: 30px;
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 2px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menuItems{
+    width: 100%;
+    height: 2px;
+    background: #343a40;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 10;
+    transition: 0s;
+}
+.menuItems::before, .menuItems::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #343a40;
+    border-radius: 15px;
+    display: flex;
+}
+.menuItems::before{
+    transform: translateY(-7px);
+}
+.menuItems::after{
+    transform: translateY(7px);
+}
+.close{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.close::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.close::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.home{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    /* margin: 5% 0%; */
+    margin-bottom: 5%;
+    padding-top: 10%;
+}
+.homeLeft{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 2%;
+}
+.homeLeft h1{
+    color: #343a40;
+    width: 85%;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 50px;
+}
+/* .homeLeft p{
+    font-size: 12px;
+    line-height: 20px;
+} */
+p:first-child{
+    font-weight: bold;
+}
+.homeLeft button{
+    background-color: #ff8057;
+    color: white;
+    text-transform: capitalize;
+    width: 30%;
+    border: none;
+    outline: none;
+    padding: 2%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.homeLeft button span{
+    color: white;
+    font-size: large;
+}
+.homeLeft button:hover{
+    transform: translateY(-2px);
+    transition: .2s linear;
+}
+.homeRight{
+    width: 50%;
+    margin-left: 2%;
+}
+.homeRight img{
+    width: 100%;
+
+}
+
+
+.sectionHead{
+    text-align: center;
+    padding: 2% 25%;
+}
+.sectionHead p{
+    padding-top: 2%;
+}
+
+
+.services{
+    width: 100%;
+    margin-bottom: 5%;
+    padding-top: 10%;
+}
+.image{
+    background-color: rgba(255,128,87,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 10%;
+}
+.image img{
+    width: 70%;
+    padding : 10%;
+}
+.row{
+    float: left;
+}
+.servicesBox{
+    width: 33.33%;
+    float: left;
+    padding: 2.5%;
+}
+.servicesBox h4, p{
+    margin-bottom: 8%;
+}
+
+.about{
+    clear: both;
+    width: 100%;
+    margin-bottom: 20%;
+    padding-top: 10%;
+}
+.aboutContent{
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+.aboutBox{
+    width: 33.33%;
+    padding: 4% 4% 4% 0%;
+}
+.aboutBox h1{
+    line-height: 40px;
+}
+.aboutBox h4{
+    padding-bottom: 5%;
+}
+
+
+.features{
+    width: 100%;
+    margin-bottom: 5%;
+    padding-top: 10%;
+}
+.featureRow{
+    display: flex;
+}
+.featureImg, .featureBox{
+    width: 50%;
+}
+.featureImg img{
+    width: 90%;
+    padding: 0% 5%;
+}
+
+.featureBox{
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.featureBox h4{
+    padding-bottom: 5%;
+}
+
+.featureBox a{
+    text-decoration: none;
+    color: #ff8057;
+}
+.featureIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin-bottom: 5%;
+    background-color: rgba(255,128,87,0.1);
+}
+.featureIcon img{
+    width: 80%;
+    padding: 10%;
+}
+
+
+.success{
+    width: 100%;
+    /* height: 500px; */
+    position: relative;
+}
+.success-bg{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/abstract.jpg');
+    height: 500px;
+    background-size: 100% 100%;
+}
+.heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 5%;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.heading h1, .heading h4{
+    color: white;
+    text-align: center;
+    padding: 0.5% 0%;
+}
+.successContainer{
+    width: auto;
+    height: 65%;
+    position: absolute;
+    top: 0%;
+    margin: 15% 5%;
+    display: flex;
+}
+.successContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+    width: 25%;
+}
+.successContent h2, .successContent h5{
+    color: white;
+}
+.circle{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 3px 0px rgb(255 255 255 / 20%);
+    display: flex;
+    align-items: center;
+}
+.circle img{
+    width: 100%;
+    padding: 30%;
+}
+
+
+.contact{
+    width: 100%;
+    margin-bottom: 5%;
+    padding-top: 10%;
+}
+.contactInfo{
+    display: flex;
+}
+.contactLeft{
+    width: 40%;
+    padding-right: 10%;
+}
+.contactLeft h1{
+    padding-bottom: 5%;
+
+}
+.addressOne, .addressTwo{
+    width: 50%;
+    float: left;
+    padding-right: 8%;
+}
+.addressOne h4, .addressTwo h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+.contactRight{
+    width: 60%;
+    /* display: block; */
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* justify-content: space-around; */
+}
+.form input, textarea{
+    padding: 1% 2%;
+    font-size: 14px;
+    color: #343a40;
+    margin: 1% 0;
+    border: 1px solid #343a402f;
+    border-radius: 5px;
+    outline: #ff8057;
+}
+textarea{
+    height: 100%;
+    /* align-items: stretch; */
+}
+.form input:focus, .form textarea:focus{
+    outline: none  !important;
+    border: 1px solid #ff8057;
+}
+form button{
+    background-color: #ff8057;
+    color: white;
+    text-transform: capitalize;
+    width: 30%;
+    border: none;
+    outline: none;
+    padding: 2%;
+    margin: 2% 0%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+form button:hover{
+    transform: translateY(-2px);
+    transition: .2s linear;
+}
+
+.newsletter{
+    width: 100%;
+    margin-bottom: 5%;
+    padding-top: 10% ;
+}
+.container{
+    text-align: center;
+    padding: 0% 25%;
+    position: relative;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 4%;
+}
+.container input{
+    width: 100%;
+    font-size: 14px;
+    color: #343a40;
+    border: none;
+    outline: none;
+    /* padding: 13px 180px 13px 30px; */
+    padding: 3% 5%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 30%);
+}
+.container button{
+    background-color: #ff8057;
+    color: white;
+    text-transform: capitalize;
+    width: 15%;
+    border: none;
+    outline: none;
+    padding: 1.5% 2%;
+    /* margin: 2% 0%; */
+    border-radius: 0 30px 30px 0;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container button:hover{
+    transform: translateY(-2px);
+    transition: .2s linear;
+}
+
+footer{
+    margin-top: 10%;
+}
+
+.footer{
+    width: 100%;
+    padding: 5% 0;
+    height: auto;
+    display: flex;
+    gap: 9%;
+}
+.footerContent{
+    width: 25%;
+}
+.footerContent h1, .footerContent h4, .footerContent p{
+    padding-bottom: 8%;
+    
+}
+.footerContent li{
+    padding: 5% 0;
+    transition: .2s linear;
+}
+.footerContent a{
+    display: inline-block;
+    cursor: pointer;
+}
+.footerContent a:hover{
+    transform: translateX(4px);
+    transition: .2s linear;
+    color: #ff8057;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copyright p{
+    margin-bottom: 2.5%;
+}
+
+
+
+
+@media only screen and (max-width: 948px){
+    body{
+        margin: 0% 10%;
+    }
+    .circle{
+        height: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        margin: 0% 15%;
+    }
+   
+    .navbar{
+        width: 100%;
+        display: block;
+    }
+    .navLeft{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: inherit;
+    }
+    .navRight{
+        width: 100%;
+    }
+    .navList{
+        display: none;
+    }
+    .navItems{
+        position: relative;
+        padding: 2%;
+        top: 0px;
+        background: #ff8057;
+    }
+    .navItems a{
+        color: white;
+    }
+    .show{
+        display: block;
+    }
+    .menu{
+        display: flex;
+    }
+    .home{
+        flex-direction: column;
+        height: auto;
+    }
+    .homeLeft{
+        width: 95%;
+        margin-bottom: 5%;
+        min-height: 500px;
+    }
+    .homeRight{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+    .homeRight img{
+        margin-top: 5%;
+        width: 80%;
+    }
+    .sectionHead{
+        padding: 2% 5%;
+    }
+    
+    .servicesBox, .aboutBox{
+        width: 100%;
+        float: none;
+    }
+    .aboutContent{
+        display: block;
+    }
+    .aboutBox h1{
+        width: 75%;
+    }
+    .successContainer{
+        display: block;
+        margin-top: 30%;
+    }
+     .successContent{
+        width: 50%;
+        float: left;
+        margin: 5% 0%;
+    }
+    h5{
+        white-space: nowrap;
+    }
+    .contactInfo{
+        /* display: block; */
+        flex-direction: column  ;
+    }
+    .contactLeft{
+        width: 100%;
+    }
+    .addressOne, .addressTwo{
+        width: 100%;
+    }
+    .contactRight{
+        width: 100%;
+    }
+    .features{
+        clear: both;
+    }
+    .featureImg{
+        display: flex;
+        align-items: center;
+    }
+    .newsletter{
+        width: 100%;
+        margin-bottom: 5%;
+        padding-top: 10% ;
+    }
+    .container{
+        padding: 0% 5%;
+    }
+    .container button{
+        width: 25%;
+        padding:  2.8%;
+        right: 5%;
+    }
+    
+    .footer{
+        padding: 0;
+        gap: 0;
+        flex-direction: column;
+    }
+    .footerContent{
+        width: 100%;
+    }
+    .footerContent h1, .footerContent h4{
+        padding: 5% 0;
+        
+    }
+    .footerContent p{
+        padding: 2% 0;
+        margin-bottom: 0;
+    }
+    .footerContent li{
+        padding: 2% 0;
+        transition: .2s linear;
+    }
+    .copyright{
+        margin-top: 5%;
+    }
+    
+}
+
+@media only screen and (max-width: 480px){
+    body{
+        margin: 0% 5%;
+    }
+    .homeLeft button{
+        width: 50%;
+        padding: 2%;
+    }
+    .features{
+        clear: both;
+    }
+    .featureRow{
+        flex-direction: column;
+    }
+    .featureImg, .featureBox{
+        width: 100%;
+    }
+    .success-bg{
+        height: 750px;
+    }
+    
+    .successContainer{
+        margin-top: 40%;
+        flex-direction: column;
+    }
+    .successContent{
+        gap: 0%;
+        width: 100%;
+        margin: 3% 0%;
+    }
+    .circle{
+        width: 20%;
+        height: 50%;
+    }
+    
+}
